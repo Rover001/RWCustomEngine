@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "CustomEngine"
-  spec.version      = "0.0.3"
+  spec.version      = "0.1.0"
   spec.summary      = "自定义管理SDK"
   spec.homepage     = "https://github.com/Rover001/CustomEngine"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
