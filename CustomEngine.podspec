@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "CustomEngine"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "自定义管理SDK"
   spec.homepage     = "https://github.com/Rover001/CustomEngine"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "9.0"
   spec.source       = { :git => "https://github.com/Rover001/CustomEngine.git", :tag => "#{spec.version}" }
   #spec.ios.vendored_frameworks  = "CustomEngine/***.framework"
-   spec.ios.vendored_frameworks  = "src/CustomEngine.framework"
+   spec.ios.vendored_frameworks  = "src/*.framework"
   spec.requires_arc = true
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
