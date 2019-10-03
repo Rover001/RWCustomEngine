@@ -10,9 +10,8 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios
   spec.platform     = :ios, "9.0"
   spec.ios.deployment_target = "9.0"
-  spec.source       = { :git => "https://github.com/Rover001/CustomEngine.git", :tag => "#{spec.version.to_s}" }
+  spec.source       = { :git => "https://github.com/Rover001/CustomEngine.git", :tag => "#{spec.version}" }
   #spec.source_files  = "src"
   spec.ios.vendored_frameworks  = "CustomEngine/*.framework"
-  #spec.frameworks = "UIKit","Foundation"
   spec.requires_arc = true
 end
