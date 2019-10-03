@@ -1,2 +1,2 @@
 # CustomEngine
-自定制的Engine
+ pod 'CustomEngine', '~> 0.1'
