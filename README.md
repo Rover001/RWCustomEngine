@@ -1,2 +1,2 @@
 # CustomEngine
- pod 'CustomEngine', '~> 0.1'
+ pod 'CustomEngine', '~> 0.1.2'
