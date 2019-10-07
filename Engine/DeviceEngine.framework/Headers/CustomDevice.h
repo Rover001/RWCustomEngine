@@ -1,19 +1,20 @@
 //
-//  DeviceEngine_OC.h
-//  CustomEngine
+//  CustomDevice.h
+//  DeviceEngine
 //
-//  Created by 曾云 on 2019/10/3.
+//  Created by 曾云 on 2019/10/7.
 //  Copyright © 2019 曾云. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
+#define CustomDeviceEngine [CustomDevice defaultCustomDevice]
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DeviceEngine_OC : NSObject
+@interface CustomDevice : NSObject
 
-+ (DeviceEngine_OC *)defaultDeviceEngine;
++ (CustomDevice *)defaultCustomDevice;
 
 #pragma mark - DeviceType  设备分类
 - (BOOL)isSimulator;/*🐱 是否是模拟器 */
@@ -242,53 +243,46 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isiPadPro11;
 - (BOOL)isiPadPro129;
 
-//isiPadPro11 iPadPro129_3
-- (BOOL)iPad_FullScreen;/**<🐱 ipad是否是全面屏 */
+/**<🐱
+ ipad是否是全面屏
+ isiPadPro11
+ iPadPro129_3
+ 
+ 统一名称：- (BOOL)iPad_FullScreen;
+ */
+- (BOOL)iPad_FullScreen;
 
 #pragma mark -- PixelType 开发像素分类
 #pragma mark - OtherType  其他类型 比如 导航栏高度。。。
 
+- (UIDeviceOrientation)deviceOrientation;/**<🐱 设备硬件旋转方向 */
+- (BOOL)deviceIsPortrait;/**< 🐱 设备是否是竖屏 */
+- (BOOL)deviceIsLandscape;/**< 🐱 设备是否是横屏 */
+- (UIInterfaceOrientation)interfaceOrientation;/**<🐱 程序界面的当前旋转方向 */
+- (BOOL)interfaceIsPortrait;/**<🐱 程序是否是竖屏 */
+- (BOOL)interfaceIsLandscape;/**<🐱 程序是否是横屏 */
 
-- (double)deviceNavigationBarHeight;/**<🐱  导航栏的高度 44.0f */
-- (double)deviceStatusBarHeight;/**<🐱 状态栏高度 */
-- (BOOL)isDevicieStatusBarHidden;/**<🐱 状态栏是否隐藏 */
-- (double)deviceTabBarHeight;/**<🐱 TabBar 高度 49.0f */
+
 - (CGFloat)deviceHeight;/**<🐱 设备高度 */
 - (CGFloat)deviceWidth;/**<🐱 设备宽度 */
 - (CGFloat)deviceScale;/**<🐱  */
 
-- (CGFloat)deviceNavigationBarHeight_iPhone_Horizontally;/**<🐱  横屏 导航栏的高度 */
-- (CGFloat)deviceNavigationBarHeight_iPhone_Vertically;/**<🐱  竖屏 导航栏的高度 44.0f */
-- (CGFloat)deviceStatusBarHeight_iPhone_Horizontally;/**<🐱  横屏 状态栏高度 */
-- (CGFloat)deviceStatusBarHeight_iPhone_Vertically;/**<🐱  竖屏 状态栏高度 默认 20.0f  全面屏 44.0f */
-- (CGFloat)deviceTabBarHeight_iPhone_Horizontally;/**<🐱  横屏 TabBar高度 */
-- (CGFloat)deviceTabBarHeight_iPhone_Vertically;/**<🐱  竖屏 状态栏高度 49.0f */
-- (CGFloat)deviceSafeAreaBottomHeight_iPhone_Horizontally;/**<🐱 横屏 全面屏底部安全区域高度 */
-- (CGFloat)deviceSafeAreaBottomHeight_iPhone_Vertically;/**<🐱 竖屏 全面屏底部安全区域高度 */
+- (CGFloat)deviceStatusBarHeight;/**<🐱 状态栏高度 */
+- (BOOL)devicieStatusBarIsHidden;/**<🐱 状态栏是否隐藏 */
 
-- (CGFloat)deviceNavigationBarHeight_iPad;/**<🐱  导航栏的高度 44.0f IOS_12以及全面屏 50.0f */
-- (CGFloat)deviceStatusBarHeight_iPad;/**<🐱  状态栏高度 默认 20.0f  全面屏 24.0f */
-- (CGFloat)deviceTabBarHeight_iPad;/**<🐱 状态栏高度 49.0f IOS_12以及全面屏 50.0f  */
-- (CGFloat)deviceSafeAreaBottomHeight_iPad;/**<🐱 全面屏底部安全区域高度 15.0f */
+- (CGFloat)deviceNavigationBarHeight;/**<🐱  导航栏的高度  */
+- (CGFloat)deviceTabBarHeight;/**<🐱 TabBar 高度 */
 
-
-/*
- 下面的高度会根据页面是否存在导航栏 和设备类型 动态变化
-- (double)deviceSafeAreaBottomHeight;
-- (double)deviceSafeAreaTopHeight;
-- (double)deviceSafeAreaHeight;
-- (double)deviceSafeAreaInsets;
-- (double)deviceSafeAreaInsetsTop;
-- (double)deviceSafeAreaInsetsLeft;
-- (double)deviceSafeAreaInsetsBottom;
-- (double)deviceSafeAreaInsetsRight;
-*/
-
+/* 🐱 IOS_11之前都为0.0f */
+- (CGFloat)deviceSafeAreaTopHeight;/**<🐱 顶部安全区域高度 */
+- (CGFloat)deviceSafeAreaBottomHeight;/**<🐱 底部的安全区域高度 */
+- (CGFloat)deviceSafeAreaLeftHeight;/**<🐱 左边安全区域宽度 */
+- (CGFloat)deviceSafeAreaRightHeight;/**<🐱 右边的安全区域宽度 */
+- (CGFloat)deviceSafeAreaHeight;/**<🐱 安全区域高度 */
+- (CGFloat)deviceSafeAreaWidth;/**<🐱 安全区域宽度 */
 
 - (NSString *)deviceAvailableStoreSize;/**<🐱 设备可用存储大小 MB */
 - (NSString *)deviceIPAdress;/**<🐱 设备的IP地址 */
-
-
 @end
 
 NS_ASSUME_NONNULL_END

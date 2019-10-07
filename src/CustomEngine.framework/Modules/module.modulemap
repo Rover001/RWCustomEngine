@@ -1,6 +1,0 @@
-framework module CustomEngine {
-  umbrella header "CustomEngine.h"
-
-  export *
-  module * { export * }
-}
