@@ -3,9 +3,10 @@
 使用CocoaPods导入 `pod 'CustomEngine', '~> 0.1.2'`
 
 ## DeviceEngine.framework IOS设备管理类 包含CustomDevice单例类
-两种方式导入头文件 
+两种方式导入头文件(三选一) 
 - ```#import <DeviceEngine/DeviceEngine.h>```
 - ```#import <DeviceEngine/CustomDevice.h>```
+- ```@import DeviceEngine.CustomDevice``` 
 
 CustomDevice是一个单例类
 

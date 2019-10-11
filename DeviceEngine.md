@@ -8,14 +8,15 @@ CustomDevice是一个单例类
 
 - 使用 ```[CustomDevice defaultCustomDevice]```初始化
 - 使用宏定义 ```#define CustomDeviceEngine [CustomDevice defaultCustomDevice]```
+- 使用 ```@import DeviceEngine.CustomDevice``` 导入
 
 ## CustomDevice单例类  
 ### 设备类型判断
 ```
 - (BOOL)isSimulator;/*🐱 是否是模拟器 */
-- (BOOL)isPad;/*🐱 是否是Pad */
+- (BOOL)isiPad;/*🐱 是否是iPad */
 - (BOOL)isiPhone;/*🐱 是否是手机 */
-- (BOOL)isPodTouch;/*🐱 是否是Touch */
+- (BOOL)isiPodTouch;/*🐱 是否是iPodTouch */
 - (BOOL)isAppleTV;/*🐱 是否是电视TV */
 - (BOOL)isCarolay;
 ```
