@@ -12,7 +12,7 @@ CustomDevice是一个单例类
 
 ## CustomDevice单例类  
 ### 设备类型判断
-```
+```objectivec
 - (BOOL)isSimulator;/*🐱 是否是模拟器 */
 - (BOOL)isiPad;/*🐱 是否是iPad */
 - (BOOL)isiPhone;/*🐱 是否是手机 */
@@ -22,7 +22,7 @@ CustomDevice是一个单例类
 ```
 ### 真机类型判断 
 #### iPhone类型判断、iPodTouch类型判断
-```
+```objectivec
 - (BOOL)iPhone;
 - (BOOL)iPhone3G;
 - (BOOL)iPhone3GS;
@@ -56,7 +56,7 @@ CustomDevice是一个单例类
 - (BOOL)iPodTouch7;
 ```
 #### iPad类型判断
-```
+```objectivec
 - (BOOL)iPad;
 - (BOOL)iPad2;
 - (BOOL)iPad3;
@@ -80,7 +80,7 @@ CustomDevice是一个单例类
 ```
 ### 开发尺寸类型判断 支持真机、模拟器
 #### iPhone开发尺寸类型判断
-```
+```objectivec
 - (BOOL)iPhone_320_480;
 /**<🐱iPhone_320_480 开发尺寸，包含设备类型 （iphone类型）
  - (BOOL)iPhone;
@@ -169,7 +169,7 @@ CustomDevice是一个单例类
 ```
 
 #### iPad开发尺寸类型判断
-```
+```objectivec
 - (BOOL)ipad_768_1024;
 /**<🐱
  ipad_768_1024 开发尺寸，包含设备类型 （ipad类型）
@@ -228,7 +228,7 @@ CustomDevice是一个单例类
 ```
 
 ### 其他类型判断 支持真机、模拟器
-```
+```objectivec
 - (UIDeviceOrientation)deviceOrientation;/**<🐱 设备硬件旋转方向 */
 - (BOOL)deviceIsPortrait;/**< 🐱 设备是否是竖屏 */
 - (BOOL)deviceIsLandscape;/**< 🐱 设备是否是横屏 */
