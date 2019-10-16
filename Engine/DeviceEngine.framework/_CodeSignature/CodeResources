@@ -6,15 +6,15 @@
 	<dict>
 		<key>Headers/CustomDevice.h</key>
 		<data>
-		XtLY31hnXupt3DuwFo7OoACiIrU=
+		yy/6dbTIxH6pIzYcMjRXGm0JCzU=
 		</data>
 		<key>Headers/DeviceEngine.h</key>
 		<data>
-		BxlsU/GV3k5q6ntUUonklDus6Zc=
+		6UJHxKlXOLOiTCp7DopkHVzHtzY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		F97gK8f1Nkd/RN+UQvndBC3jnSQ=
+		UG27NWrBha1F2zVACm8DNYLOgVY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -27,22 +27,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XtLY31hnXupt3DuwFo7OoACiIrU=
+			yy/6dbTIxH6pIzYcMjRXGm0JCzU=
 			</data>
 			<key>hash2</key>
 			<data>
-			3s/W3Exe39WrrIYKVBDHnAnkuH6J/g8+s8ygBY3BU9E=
+			c4Hf5uz/UuG4GcOT4BUN6nVHEMl6mbqcpsBE969SRGk=
 			</data>
 		</dict>
 		<key>Headers/DeviceEngine.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BxlsU/GV3k5q6ntUUonklDus6Zc=
+			6UJHxKlXOLOiTCp7DopkHVzHtzY=
 			</data>
 			<key>hash2</key>
 			<data>
-			96bzNrt/2adJSuxONwjGSp2WaNCZ7219T5Ij7Yg4PyQ=
+			6lE+V9heOERakfI/40yFqdXNvhNRdAHs5wdEXUrkQ0s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

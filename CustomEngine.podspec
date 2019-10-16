@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "CustomEngine"
-  spec.version      = "0.1.2"
+  spec.version      = "0.1.3"
   spec.summary      = "自定义管理SDK"
   spec.homepage     = "https://cocoapods.org/pods/CustomEngine"
   spec.license      = { :type => "MIT", :file => "LICENSE" }

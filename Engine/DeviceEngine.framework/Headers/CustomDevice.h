@@ -16,11 +16,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (CustomDevice *)defaultCustomDevice;
 
+/**<🐱 屏幕旋转回调 在viewWillAppear里面使用 */
+@property (nonatomic,strong)void(^deviceAutorotateBlock)(void);
+
+
 #pragma mark - DeviceType  设备分类
 - (BOOL)isSimulator;/*🐱 是否是模拟器 */
-- (BOOL)isPad;/*🐱 是否是Pad */
+- (BOOL)isiPad;/*🐱 是否是iPad */
 - (BOOL)isiPhone;/*🐱 是否是手机 */
-- (BOOL)isPodTouch;/*🐱 是否是Touch */
+- (BOOL)isiPodTouch;/*🐱 是否是iPodTouch */
 - (BOOL)isAppleTV;/*🐱 是否是电视TV */
 - (BOOL)isCarolay;
 #pragma mark - 用于真机判断
@@ -89,8 +93,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark -- SizeType 开发尺寸分类
 
 /**<🐱
- iPhone_320_480 开发尺寸
- 包含设备类型 （iphone类型）
+ iPhone_320_480 开发尺寸,包含设备类型 （iphone类型）
  - (BOOL)iPhone;
  - (BOOL)iPhone3G;
  - (BOOL)iPhone3GS;
@@ -107,8 +110,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)iPhone_320_480;
 
 /**<🐱
- iPhone_320_568 开发尺寸
- 包含设备类型 （iphone类型）
+ iPhone_320_568 开发尺寸,包含设备类型 （iphone类型）
  - (BOOL)iPhone5;
  - (BOOL)iPhone5C;
  - (BOOL)iPhone5S;
@@ -123,8 +125,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)iPhone_320_568;
 
 /**<🐱
- iPhone_375_667 开发尺寸
- 包含设备类型 （iphone类型）
+ iPhone_375_667 开发尺寸,包含设备类型 （iphone类型）
  - (BOOL)iPhone6;
  - (BOOL)iPhone6S;
  - (BOOL)iPhone7;
@@ -136,8 +137,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)iPhone_375_667;
 
 /**<🐱
- iPhone_414_736 开发尺寸
- 包含设备类型 （iphone类型）
+ iPhone_414_736 开发尺寸,包含设备类型 （iphone类型）
  - (BOOL)iPhone6Plus;
  - (BOOL)iPhone6SPlus;
  - (BOOL)iPhone7Plus;
@@ -149,8 +149,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)iPhone_414_736;
 
 /**<🐱
- iPhone_375_812 开发尺寸
- 包含设备类型 （iphone类型）
+ iPhone_375_812 开发尺寸,包含设备类型 （iphone类型）
  - (BOOL)iPhoneX;
  - (BOOL)iPhoneXS;
  - (BOOL)iPhone11Pro;
@@ -161,13 +160,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)iPhone_375_812;
 
 /**<🐱
- iPhone_414_896 开发尺寸
- 包含设备类型 （iphone类型）
+ iPhone_414_896 开发尺寸,包含设备类型 （iphone类型）
  - (BOOL)iPhoneXR;
  - (BOOL)iPhoneXSMAX;
  - (BOOL)iPhone11;
  - (BOOL)iPhone11ProMax;
- 
  
   统一名称：- (BOOL)isiPhoneXPlus;
  */
@@ -186,8 +183,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)iPhone_Plus;/*🐱 手机是否是Plus机型 isiPhonePlus  isiPhoneFullScreenPlus */
 
 /**<🐱
- ipad_768_1024 开发尺寸
- 包含设备类型 （ipad类型）
+ ipad_768_1024 开发尺寸,包含设备类型 （ipad类型）
  - (BOOL)iPad;
  - (BOOL)iPad2;
  - (BOOL)iPad3;
@@ -208,8 +204,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)ipad_768_1024;
 
 /**<🐱
- ipad_834_1112 开发尺寸
- 包含设备类型 （ipad类型）
+ ipad_834_1112 开发尺寸,包含设备类型 （ipad类型）
  - (BOOL)iPadAir3;
  - (BOOL)iPadPro105;
  
@@ -218,8 +213,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)ipad_834_1112;
 
 /**<🐱
- ipad_834_1194 开发尺寸
- 包含设备类型 （ipad类型）
+ ipad_834_1194 开发尺寸,包含设备类型 （ipad类型）
  - (BOOL)iPadPro11;
  
  统一名称：- (BOOL)isiPadPro11;
@@ -227,8 +221,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)ipad_834_1194;
 
 /**<🐱
- ipad_1024_1136 开发尺寸
- 包含设备类型 （ipad类型）
+ ipad_1024_1136 开发尺寸,包含设备类型 （ipad类型）
  - (BOOL)iPadPro129;
  - (BOOL)iPadPro129_2;
  - (BOOL)iPadPro129_3;
@@ -273,7 +266,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (CGFloat)deviceNavigationBarHeight;/**<🐱  导航栏的高度  */
 - (CGFloat)deviceTabBarHeight;/**<🐱 TabBar 高度 */
 
-/* 🐱 IOS_11之前都为0.0f */
+/* 🐱 默认0.0f  IOS_11*/
 - (CGFloat)deviceSafeAreaTopHeight;/**<🐱 顶部安全区域高度 */
 - (CGFloat)deviceSafeAreaBottomHeight;/**<🐱 底部的安全区域高度 */
 - (CGFloat)deviceSafeAreaLeftHeight;/**<🐱 左边安全区域宽度 */
