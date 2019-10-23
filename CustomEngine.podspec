@@ -16,4 +16,6 @@ Pod::Spec.new do |spec|
   spec.subspec 'Category' do |s|
        s.source_files = 'Engine/Category/*.{h,m}'
        s.public_header_files = 'Engine/Category/*.h'
+  end
+    
 end
