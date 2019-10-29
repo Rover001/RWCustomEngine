@@ -1,5 +1,7 @@
 # CustomEngine 自定义管理类 
 
+![podversion](https://img.shields.io/cocoapods/v/CustomEngine.svg)
+
 使用CocoaPods导入 `pod 'CustomEngine', '~> 0.1.2'`
 
 ## DeviceEngine.framework IOS设备管理类 包含CustomDevice单例类
