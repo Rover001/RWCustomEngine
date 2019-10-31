@@ -1,6 +1,6 @@
 # CustomEngine 自定义管理类 
 
-使用CocoaPods导入 `pod 'CustomEngine', '~> 0.1.2'`
+使用CocoaPods导入 `pod 'CustomEngine', '~> 0.1.4'`
 
 ## DeviceEngine.framework IOS设备管理类 包含CustomDevice单例类
 两种方式导入头文件(三选一) 
