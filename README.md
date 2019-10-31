@@ -1,6 +1,5 @@
 # CustomEngine 自定义管理类 
 
-使用CocoaPods导入 `pod 'CustomEngine', '~> 0.1.4'`
 ![podversion](https://img.shields.io/cocoapods/v/CustomEngine.svg)
 
 使用CocoaPods导入 `pod 'CustomEngine'`
