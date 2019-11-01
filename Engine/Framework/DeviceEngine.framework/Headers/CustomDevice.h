@@ -12,13 +12,31 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/*  软件主要定向样式 默认是竖屏
+ 导航栏 状态栏 、、、都会竖屏样式返回值
+ */
+typedef NS_ENUM(NSInteger,CustomDeviceOrientationStyle) {
+    CustomDeviceOrientationStyle_Portrait = 0,  /**< 🐱 竖屏  默认 */
+    CustomDeviceOrientationStyle_Landscape = 1, /**< 🐱 横屏 */
+    CustomDeviceOrientationStyle_Auto = 2       /**< 🐱  横竖屏自动切换 */
+};
+
+
 @interface CustomDevice : NSObject
 
+
+/// 初始化 OrientationStyle 默认为 CustomDeviceOrientationStyle_Portrait
 + (CustomDevice *)defaultCustomDevice;
+
+/// 初始化
+/// @param orientationStyle 软件主要定向样式
++ (CustomDevice *)defaultCustomDeviceOrientationStyle:(CustomDeviceOrientationStyle)orientationStyle;
+
 
 /**<🐱 屏幕旋转回调 在viewWillAppear里面使用 */
 @property (nonatomic,strong)void(^deviceAutorotateBlock)(void);
 
+@property (nonatomic,readonly) CustomDeviceOrientationStyle orientationStyle;/* 软件主要定向样式 */
 
 #pragma mark - DeviceType  设备分类
 - (BOOL)isSimulator;/*🐱 是否是模拟器 */
@@ -179,7 +197,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isiPhoneFullScreen;
 - (BOOL)isiPhoneFullScreenPlus;
 
-- (BOOL)iPhone_FullScreen;/*🐱 手机是否是全面屏 isiPhoneFullScreen isiPhoneFullScreen */
+- (BOOL)iPhone_FullScreen;/*🐱 手机是否是全面屏 isiPhoneFullScreen isiPhoneFullScreenPlus */
 - (BOOL)iPhone_Plus;/*🐱 手机是否是Plus机型 isiPhonePlus  isiPhoneFullScreenPlus */
 
 /**<🐱
