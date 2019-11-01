@@ -12,8 +12,9 @@
 
 CustomDevice是一个单例类
 
-- 使用 ```[CustomDevice defaultCustomDevice]```初始化
-- 使用宏定义 ```#define CustomDeviceEngine [CustomDevice defaultCustomDevice]```
+- 在AppDelegate的  didFinishLaunchingWithOptions 中初始化
+    - ```[CustomDevice defaultCustomDevice]```
+    - ```[CustomDevice defaultCustomDeviceOrientationStyle:]```
 
 ### CustomDevice单例类  
 

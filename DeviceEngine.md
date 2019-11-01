@@ -7,8 +7,9 @@
 
 CustomDevice是一个单例类
 
-- 使用 ```[CustomDevice defaultCustomDevice]```初始化
-- 使用宏定义 ```#define CustomDeviceEngine [CustomDevice defaultCustomDevice]```
+- 使用初始化
+    - ```[CustomDevice defaultCustomDevice]```
+    - ```[CustomDevice defaultCustomDeviceOrientationStyle:]```
 
 ## CustomDevice单例类  
 ### 设备类型判断

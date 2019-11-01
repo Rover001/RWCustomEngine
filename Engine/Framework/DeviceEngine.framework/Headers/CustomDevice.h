@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#define CustomDeviceEngine [CustomDevice defaultCustomDevice]
+#define DeviceEngine_Portrait [CustomDevice defaultCustomDevice]
+#define DeviceEngine_Landscape [CustomDevice defaultCustomDeviceOrientationStyle:CustomDeviceOrientationStyle_Landscape]
+#define DeviceEngine_Auto [CustomDevice defaultCustomDeviceOrientationStyle:CustomDeviceOrientationStyle_Auto]
+
 
 NS_ASSUME_NONNULL_BEGIN
 
