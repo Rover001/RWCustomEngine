@@ -1,0 +1,18 @@
+PODS:
+  - CustomEngine (0.1.6):
+    - CustomEngine/Category (= 0.1.6)
+  - CustomEngine/Category (0.1.6)
+
+DEPENDENCIES:
+  - CustomEngine (~> 0.1.6)
+
+SPEC REPOS:
+  trunk:
+    - CustomEngine
+
+SPEC CHECKSUMS:
+  CustomEngine: 6e592749e7b5378d11a6f0f5863aa54eae84e951
+
+PODFILE CHECKSUM: b78cb246c940c63fe4c86c7819d71b2dc1687a24
+
+COCOAPODS: 1.8.1

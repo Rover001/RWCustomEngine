@@ -1,0 +1,6 @@
+framework module Pods_RWDeviceEngineDemo {
+  umbrella header "Pods-RWDeviceEngineDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

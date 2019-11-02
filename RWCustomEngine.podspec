@@ -1,15 +1,15 @@
 
 Pod::Spec.new do |spec|
-  spec.name         = "CustomEngine"
-  spec.version      = "0.1.6"
+  spec.name         = "RWCustomEngine"
+  spec.version      = "0.1.7"
   spec.summary      = "自定义管理SDK"
-  spec.homepage     = "https://cocoapods.org/pods/CustomEngine"
+  spec.homepage     = "https://cocoapods.org/pods/RWCustomEngine"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "Rover001" => "zengyun6666@163.com" }
   spec.platform     = :ios, "9.0"
   spec.ios.deployment_target = "9.0"
-  spec.source       = { :git => "https://github.com/Rover001/CustomEngine.git", :tag => "#{spec.version}" }
-  spec.ios.vendored_frameworks  = "Engine/Framework/*.framework"
+  spec.source       = { :git => "https://github.com/Rover001/RWCustomEngine.git", :tag => "#{spec.version}" }
+  spec.ios.vendored_frameworks  = "RWDeviceEngine/*.framework"
   spec.requires_arc = true
   
   spec.subspec 'Category' do |s|
