@@ -7,9 +7,11 @@
 
 CustomDevice是一个单例类
 
-- 使用初始化
+- 在AppDelegate中设置定向样式  
+- IOS_13以下 在  '- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions' 方法中 设定App定向样式
+- IOS_13以上 '- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options  API_AVAILABLE(ios(13.0))' 方法中 设定App定向样式
     - ```[CustomDevice defaultCustomDevice]```
-    - ```[CustomDevice defaultCustomDeviceOrientationStyle:]```
+    - ```[CustomDevice defaultCustomDeviceOrientationStyle:<#CustomDeviceOrientationStyle#>];```
 
 ## CustomDevice单例类  
 ### 设备类型判断

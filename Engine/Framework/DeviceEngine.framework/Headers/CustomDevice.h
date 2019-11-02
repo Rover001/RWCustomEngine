@@ -8,15 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#define DeviceEngine_Portrait [CustomDevice defaultCustomDevice]
-#define DeviceEngine_Landscape [CustomDevice defaultCustomDeviceOrientationStyle:CustomDeviceOrientationStyle_Landscape]
-#define DeviceEngine_Auto [CustomDevice defaultCustomDeviceOrientationStyle:CustomDeviceOrientationStyle_Auto]
-
+#define CustomDeviceEngine [CustomDevice defaultCustomDevice]
 
 NS_ASSUME_NONNULL_BEGIN
 
-/*  软件主要定向样式 默认是竖屏
- 导航栏 状态栏 、、、都会竖屏样式返回值
+/*  软件主要定向样式
+ 默认是竖屏  导航栏 状态栏 、、、都会竖屏样式返回值
  */
 typedef NS_ENUM(NSInteger,CustomDeviceOrientationStyle) {
     CustomDeviceOrientationStyle_Portrait = 0,  /**< 🐱 竖屏  默认 */
@@ -24,22 +21,61 @@ typedef NS_ENUM(NSInteger,CustomDeviceOrientationStyle) {
     CustomDeviceOrientationStyle_Auto = 2       /**< 🐱  横竖屏自动切换 */
 };
 
+/* 🐱
+
+ CustomDevice OtherType中的值都是根据系统的手机来计算的
+ 
+ 比如：iPhone11ProMax 在横屏下 系统导航栏是32.0f； 如果你的导航栏需求不是32.0f；这样的话就不能满足需求，怎么办？
+
+ */
 
 @interface CustomDevice : NSObject
 
 
-/// 初始化 OrientationStyle 默认为 CustomDeviceOrientationStyle_Portrait
+#pragma mark - 设置App定向样式
+/* 🐱
+IOS_13以下 在  '- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions' 方法中 设定App定向样式
+ 
+IOS_13以上 '- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options  API_AVAILABLE(ios(13.0))' 方法中 设定App定向样式
+
+ 设置App定向样式：
+ 1.[CustomDevice defaultCustomDevice];
+ 2.[CustomDevice defaultCustomDeviceOrientationStyle:<#CustomDeviceOrientationStyle#>];
+
+ */
+
+/// 默认为 CustomDeviceOrientationStyle_Portrait
 + (CustomDevice *)defaultCustomDevice;
 
-/// 初始化
 /// @param orientationStyle 软件主要定向样式
 + (CustomDevice *)defaultCustomDeviceOrientationStyle:(CustomDeviceOrientationStyle)orientationStyle;
+
+
+@property (nonatomic,readonly) CustomDeviceOrientationStyle orientationStyle;/* 定向样式 */
+
+#pragma mark - 特殊需求
+/* 🐱 特殊需求 OtherType中返回值都是根据系统计算的
+ 比如：
+ 1.整个工程大多数页面都是竖屏的，但是里面会存在一个或者几个页面需要横屏处理，怎么办？
+ 2.整个工程大多数页面都是横屏的，但是里面会存在一个或者几个页面需要竖屏处理，怎么办？
+ 
+ 请使用一下两个方法：  获取其他类型属性的值
+ 竖屏：+ (CustomDevice *)dealWithSeparatePortrait;
+ 横屏：+ (CustomDevice *)dealWithSeparateLandscape;
+ 
+ */
+
+/* 🐱 单独处理竖屏 */
++ (CustomDevice *)dealWithSeparatePortrait;
+
+/* 🐱 单独处理横屏  */
++ (CustomDevice *)dealWithSeparateLandscape;
+
 
 
 /**<🐱 屏幕旋转回调 在viewWillAppear里面使用 */
 @property (nonatomic,strong)void(^deviceAutorotateBlock)(void);
 
-@property (nonatomic,readonly) CustomDeviceOrientationStyle orientationStyle;/* 软件主要定向样式 */
 
 #pragma mark - DeviceType  设备分类
 - (BOOL)isSimulator;/*🐱 是否是模拟器 */
@@ -297,6 +333,8 @@ typedef NS_ENUM(NSInteger,CustomDeviceOrientationStyle) {
 
 - (NSString *)deviceAvailableStoreSize;/**<🐱 设备可用存储大小 MB */
 - (NSString *)deviceIPAdress;/**<🐱 设备的IP地址 */
+
+
 @end
 
 NS_ASSUME_NONNULL_END
