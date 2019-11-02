@@ -1,8 +1,11 @@
-# CustomEngine 自定义管理类 
+# RWCustomEngine(CustomEngine) 自定义管理类 
+修改pod文件名称 `0.1.6` 之前版本使用的是`CustomEngine`  之后改名使用 `RWCustomEngine`
 
 ![podversion](https://img.shields.io/cocoapods/v/CustomEngine.svg)
-
 使用CocoaPods导入 `pod 'CustomEngine'`
+
+![podversion](https://img.shields.io/cocoapods/v/RWCustomEngine.svg)
+使用CocoaPods导入 `pod 'RWCustomEngine'`
 
 ## DeviceEngine.framework IOS设备管理类 包含CustomDevice单例类
 两种方式导入头文件(三选一) 
@@ -30,7 +33,7 @@ CustomDevice是一个单例类
   - iPad 类型: `- (BOOL)ipad_768_1024` `- (BOOL)ipad_1024_1136` `等等` 
 - 其他类型判断:`- (CGFloat)deviceNavigationBarHeight` `- (CGFloat)deviceSafeAreaBottomHeight` `等等`
 
-[CustomDevice更多详情](https://github.com/Rover001/CustomEngine/blob/master/DeviceEngine.md)  `DeviceEngine.md`
+[CustomDevice更多详情](https://github.com/Rover001/RWCustomEngine/blob/master/RWDeviceEngine/DeviceEngine.md)  `DeviceEngine.md`
 
 
 
