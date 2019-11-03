@@ -4,7 +4,12 @@
 target 'RWDeviceEngineDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'CustomEngine','~> 0.1.6'
+
+#在0.1.6之前都使用CustomEngine这个名称
+#在0.1.6以后都使用RWCustomEngine这个名称
+#  pod 'CustomEngine','~> 0.1.6'
+  pod 'RWCustomEngine','~> 0.1.7'
+  
   # Pods for RWDeviceEngineDemo
 
 end

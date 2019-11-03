@@ -1,0 +1,6 @@
+framework module RWCustomEngine {
+  umbrella header "RWCustomEngine-umbrella.h"
+
+  export *
+  module * { export * }
+}

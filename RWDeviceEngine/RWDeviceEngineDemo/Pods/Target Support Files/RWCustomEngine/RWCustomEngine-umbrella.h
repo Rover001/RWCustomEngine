@@ -12,6 +12,6 @@
 
 #import "UIView+FrameEngine.h"
 
-FOUNDATION_EXPORT double CustomEngineVersionNumber;
-FOUNDATION_EXPORT const unsigned char CustomEngineVersionString[];
+FOUNDATION_EXPORT double RWCustomEngineVersionNumber;
+FOUNDATION_EXPORT const unsigned char RWCustomEngineVersionString[];
 

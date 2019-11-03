@@ -1,18 +1,18 @@
 PODS:
-  - CustomEngine (0.1.6):
-    - CustomEngine/Category (= 0.1.6)
-  - CustomEngine/Category (0.1.6)
+  - RWCustomEngine (0.1.7):
+    - RWCustomEngine/Category (= 0.1.7)
+  - RWCustomEngine/Category (0.1.7)
 
 DEPENDENCIES:
-  - CustomEngine (~> 0.1.6)
+  - RWCustomEngine (~> 0.1.7)
 
 SPEC REPOS:
   trunk:
-    - CustomEngine
+    - RWCustomEngine
 
 SPEC CHECKSUMS:
-  CustomEngine: 6e592749e7b5378d11a6f0f5863aa54eae84e951
+  RWCustomEngine: 7288aa035f7bf016f05be6e4c39dacb9a118e8e8
 
-PODFILE CHECKSUM: b78cb246c940c63fe4c86c7819d71b2dc1687a24
+PODFILE CHECKSUM: ab9074ab968c67a9ae65892d812f00934d7dbaf6
 
 COCOAPODS: 1.8.1
