@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CustomDevice.h</key>
 		<data>
-		OXKRd4JixQ4dghoQ/rBco47NuzE=
+		tdxF1kScmiyvLyVA3zLSXc2Q4tk=
 		</data>
 		<key>Headers/DeviceEngine.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		UG27NWrBha1F2zVACm8DNYLOgVY=
+		ER76tpRn5JQB8D5u2e0YChq6fqE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -27,11 +27,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OXKRd4JixQ4dghoQ/rBco47NuzE=
+			tdxF1kScmiyvLyVA3zLSXc2Q4tk=
 			</data>
 			<key>hash2</key>
 			<data>
-			M5+ENRcSKfQ7sfuOHu2fER/vCnSJ1dI8Uf/M1nkI43M=
+			lV9+v5CTP5c+tP8+mpU63gr25CnNxmh6mUGQo0gFfPg=
 			</data>
 		</dict>
 		<key>Headers/DeviceEngine.h</key>

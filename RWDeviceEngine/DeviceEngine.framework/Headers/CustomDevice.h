@@ -95,22 +95,28 @@ IOS_13以上 '- (UISceneConfiguration *)application:(UIApplication *)application
 - (BOOL)iPhone5;
 - (BOOL)iPhone5C;
 - (BOOL)iPhone5S;
-- (BOOL)iPhoneSE;
-- (BOOL)iPhone6;
-- (BOOL)iPhone6Plus;
-- (BOOL)iPhone6S;
-- (BOOL)iPhone6SPlus;
-- (BOOL)iPhone7;
-- (BOOL)iPhone7Plus;
-- (BOOL)iPhone8;
-- (BOOL)iPhone8Plus;
-- (BOOL)iPhoneX;
-- (BOOL)iPhoneXR;
-- (BOOL)iPhoneXS;
-- (BOOL)iPhoneXSMAX;
-- (BOOL)iPhone11;
-- (BOOL)iPhone11Pro;
-- (BOOL)iPhone11ProMax;
+- (BOOL)iPhoneSE;       //像素:640x1136   倍数:2    设备尺寸:320x568
+- (BOOL)iPhoneSE2;      //像素:750*1334   倍数:3    设备尺寸:375x667
+- (BOOL)iPhone6;        //像素:750*1334   倍数:2    设备尺寸:375x667
+- (BOOL)iPhone6Plus;    //像素:1242x2208  倍数:3    设备尺寸:414x736
+- (BOOL)iPhone6S;       //像素:750*1334   倍数:2    设备尺寸:375x667
+- (BOOL)iPhone6SPlus;   //像素:1242x2208  倍数:3    设备尺寸:414x736
+- (BOOL)iPhone7;        //像素:750x1334   倍数:2    设备尺寸:375x667
+- (BOOL)iPhone7Plus;    //像素:1242x2208  倍数:3    设备尺寸:414x736
+- (BOOL)iPhone8;        //像素:750x1334   倍数:2    设备尺寸:375x667
+- (BOOL)iPhone8Plus;    //像素:1242x2436  倍数:3    设备尺寸:414x736
+- (BOOL)iPhoneX;        //像素:1125x2436  倍数:3    设备尺寸:375x812
+- (BOOL)iPhoneXR;       //像素:828x1792   倍数:2    设备尺寸:414*896
+- (BOOL)iPhoneXS;       //像素:1125x2436  倍数:3    设备尺寸:375x812
+- (BOOL)iPhoneXSMAX;    //像素:1242x2688  倍数:3    设备尺寸:414x896
+- (BOOL)iPhone11;       //像素:828x1792   倍数:2    设备尺寸:414*896
+- (BOOL)iPhone11Pro;    //像素:1125x2436  倍数:3    设备尺寸:375x812
+- (BOOL)iPhone11ProMax; //像素:1242x2688  倍数:3    设备尺寸:414x896
+- (BOOL)iPhone12Mini;   //像素:1080x2340  倍数:3    设备尺寸:360x780
+- (BOOL)iPhone12;       //像素:1170x2532  倍数:3    设备尺寸:390x844
+- (BOOL)iPhone12Pro;    //像素:1170x2532  倍数:3    设备尺寸:390x844
+- (BOOL)iPhone12ProMax; //像素:1284x2774  倍数:3    设备尺寸:428x926
+
  
 
 #pragma mark -- iPodTouchAll touch类型
@@ -187,6 +193,7 @@ IOS_13以上 '- (UISceneConfiguration *)application:(UIApplication *)application
  - (BOOL)iPhone6S;
  - (BOOL)iPhone7;
  - (BOOL)iPhone8;
+ - (BOOL)iPhoneSE2;
  
   统一名称：- (BOOL)isiPhone6;
  */
@@ -226,6 +233,15 @@ IOS_13以上 '- (UISceneConfiguration *)application:(UIApplication *)application
   统一名称：- (BOOL)isiPhoneXPlus;
  */
 - (BOOL)iPhone_414_896;
+
+/*iPhone12Mini*/
+- (BOOL)iPhone_360_780;
+/*iPhone12、iPhone12Pro*/
+- (BOOL)iPhone_390_844;
+/*iPhone12ProMax*/
+- (BOOL)iPhone_428_926;
+
+
 
 - (BOOL)isiPhone4s;
 - (BOOL)isiPhone5;
