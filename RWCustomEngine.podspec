@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "RWCustomEngine"
-  spec.version      = "0.1.8"
+  spec.version      = "0.1.9"
   spec.summary      = "管理iPhone设备,适配页面开发"
   spec.homepage     = "https://cocoapods.org/pods/RWCustomEngine"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
